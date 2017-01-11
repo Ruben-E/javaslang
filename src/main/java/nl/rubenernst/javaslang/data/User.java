@@ -36,4 +36,8 @@ public class User {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public boolean validate() throws Exception {
+        return true;
+    }
 }

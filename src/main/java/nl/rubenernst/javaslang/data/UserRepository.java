@@ -2,6 +2,8 @@ package nl.rubenernst.javaslang.data;
 
 import javaslang.control.Option;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 public class UserRepository {
@@ -16,4 +18,6 @@ public class UserRepository {
     public Option<User> findOneOption(String id) {
         return Option.of(new User(id, new Address("Test")));
     }
+
+    public List<User> findAll() { return Arrays.asList(new User("id", new Address("Test"))); }
 }
